@@ -51,8 +51,9 @@ int main()
         cout << "\n \t Kota : " << mhs[i].alamat.kota;
         cout << "\n umur : " << mhs[i].umur;
         cout << endl;
-    }
+    };
     
 
 };
+//error pada bagian getline sudah saya coba di online compiler bisa di run tetapi tidak tau kenapa disini error 
 
