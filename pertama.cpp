@@ -36,7 +36,7 @@ int main()
     cout << endl;
     cout << "\n nim : " << mhs.nim;
     cout << "\n nama : " << mhs.nama;
-    cout << "\n alamat : " << mhs.alamat;
+    cout << "\n alamat : ";
     cout << "\n umur : " << mhs.umur;
 
 }
