@@ -2,58 +2,45 @@
 //
 
 #include <iostream>
+#include <string>
 using namespace std;
 
-struct DetailAlamat {
+struct DetailAlamat
+{ // Membuat stuktur variabel alamat
     string desa;
     string kota;
 };
 
-struct Mahasiswa {
+struct Mahasiswa
+{ // Membuat stuktur variabel mahasiswa
     string nim;
     string nama;
     DetailAlamat alamat;
-    string umur;
-    
+    int umur;
 };
 
 int main()
 {
-    Mahasiswa mhs[3];
-    for (int i = 0; i<3; i++) {
-        cout << "Data ke-" << (i + 1) << ":" << endl;
-        cout << "nomor mahasiswa : ";
-        getline(cin, mhs[i].nim);
-        cout << "nama mahasiswa : ";
-        getline(cin, mhs[i].nama);
+    Mahasiswa mhs;
+    cout << " Nomor Mahasiswa : ";
+    getline(cin, mhs.nim);
+    cout << " Nama Mahasiswa : ";
+    getline(cin, mhs.nama);
 
-        cout << "alamat mahasiswa : " << endl;
-        cout << "\t Nama Desa : ";
-        cin >> mhs[i].alamat.desa;
+    cout << " Alamat Mahasiswa  " << endl;
+    cout << " \t Nama Desa : ";
+    cin >> mhs.alamat.desa;
+    cout << " \t Nama Kota : ";
+    cin >> mhs.alamat.kota;
 
-        cout << "\t Nama Kota : ";
-        cin >> mhs[i].alamat.kota;
+    cout << "Umur Mahasiswa :";
+    cin >> mhs.umur;
 
-
-        cout << "umur mahasiswa : ";
-        cin >> mhs[i].umur;
-        cin.ignore(1, '\n');
-        cout << endl;
-    }
-    
-    for (int i = 0; i < 3; i++) {
-        cout << endl;
-        cout << "Data Mahasiswa ke-" << (i + 1) << ":" << endl;
-        cout << "\n nim : " << mhs[i].nim;
-        cout << "\n nama : " << mhs[i].nama;
-        cout << "\n alamat : ";
-        cout << "\n \t Desa : " << mhs[i].alamat.desa;
-        cout << "\n \t Kota : " << mhs[i].alamat.kota;
-        cout << "\n umur : " << mhs[i].umur;
-        cout << endl;
-    };
-    
-
+    cout << endl;
+    cout << "\nNIM : " << mhs.nim;
+    cout << "\nNama : " << mhs.nama;
+    cout << "\nAlamat : ";
+    cout << "\n\tDesa : " << mhs.alamat.desa;
+    cout << "\n\tKota : " << mhs.alamat.kota;
+    cout << "\nUmur :" << mhs.umur;
 };
-//error pada bagian getline sudah saya coba di online compiler bisa di run tetapi tidak tau kenapa disini error 
-
