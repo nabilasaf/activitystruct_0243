@@ -28,8 +28,10 @@ int main()
     cout << "alamat mahasiswa : "<< endl;
     cout << "\t Nama Desa : ";
     cin >> mhs.alamat.desa;
+    cin.ignore(1, '\n');
     cout << "\t Nama Kota : ";
     cin >> mhs.alamat.kota;
+    cin.ignore(1, '\n');
 
     cout << "umur mahasiswa : ";
     cin >> mhs.umur;
