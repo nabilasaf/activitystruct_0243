@@ -22,7 +22,8 @@ int main()
     cout << "nomor mahasiswa : ";
     cin >> mhs.nim;
     cout << "nama mahasiswa : ";
-    cin >> mhs.nama;
+    cin.getline (mhs.nama,25);
+    cin.ignore(1, '\n');
 
     cout << "alamat mahasiswa : "<< endl;
     cout << "\t Nama Desa : ";
