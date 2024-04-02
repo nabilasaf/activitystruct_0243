@@ -19,30 +19,35 @@ struct Mahasiswa {
 
 int main()
 {
-    Mahasiswa mhs;
-    cout << "nomor mahasiswa : ";
-    getline(cin, mhs.nim);
-    cout << "nama mahasiswa : ";
-    getline(cin, mhs.nama);
+    Mahasiswa mhs[3];
+    for (int i = 0; i<3; i++) {
+        cout << "nomor mahasiswa : ";
+        getline(cin, mhs[i].nim);
+        cout << "nama mahasiswa : ";
+        getline(cin, mhs[i].nama);
 
-    cout << "alamat mahasiswa : " << endl;
-    cout << "\t Nama Desa : ";
-    cin >> mhs.alamat.desa;
+        cout << "alamat mahasiswa : " << endl;
+        cout << "\t Nama Desa : ";
+        cin >> mhs[i].alamat.desa;
 
-    cout << "\t Nama Kota : ";
-    cin >> mhs.alamat.kota;
+        cout << "\t Nama Kota : ";
+        cin >> mhs[i].alamat.kota;
 
 
-    cout << "umur mahasiswa : ";
-    cin >> mhs.umur;
-
-    cout << endl;
-    cout << "\n nim : " << mhs.nim;
-    cout << "\n nama : " << mhs.nama;
-    cout << "\n alamat : ";
-    cout << "\n \t Desa : " << mhs.alamat.desa;
-    cout << "\n \t Kota : " << mhs.alamat.kota;
-    cout << "\n umur : " << mhs.umur;
+        cout << "umur mahasiswa : ";
+        cin >> mhs[i].umur;
+    }
+    
+    for (int i = 0; i < 3; i++) {
+        cout << endl;
+        cout << "\n nim : " << mhs[i].nim;
+        cout << "\n nama : " << mhs[i].nama;
+        cout << "\n alamat : ";
+        cout << "\n \t Desa : " << mhs[i].alamat.desa;
+        cout << "\n \t Kota : " << mhs[i].alamat.kota;
+        cout << "\n umur : " << mhs[i].umur;
+    }
+    
 
 };
 
